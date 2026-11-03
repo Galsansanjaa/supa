@@ -1,0 +1,12 @@
+package androidx.compose.ui.text;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes3.dex */
+public final class AndroidComposeUiTextFlags {
+    public static boolean isSingleLineLineHeightOptimizationEnabled;
+    public static final AndroidComposeUiTextFlags INSTANCE = new AndroidComposeUiTextFlags();
+    public static final int $stable = 8;
+
+    private AndroidComposeUiTextFlags() {
+    }
+}

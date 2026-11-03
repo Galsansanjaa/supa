@@ -1,0 +1,68 @@
+package androidx.compose.ui.platform;
+
+import android.os.Build;
+import androidx.compose.ui.unit.Dp;
+import androidx.compose.ui.unit.DpKt;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes3.dex */
+public final class AndroidViewConfiguration implements ViewConfiguration {
+    public static final int $stable = 8;
+    private final android.view.ViewConfiguration viewConfiguration;
+
+    public AndroidViewConfiguration(android.view.ViewConfiguration viewConfiguration) {
+        this.viewConfiguration = viewConfiguration;
+    }
+
+    @Override // androidx.compose.ui.platform.ViewConfiguration
+    public long getDoubleTapMinTimeMillis() {
+        return 40L;
+    }
+
+    @Override // androidx.compose.ui.platform.ViewConfiguration
+    public long getDoubleTapTimeoutMillis() {
+        return android.view.ViewConfiguration.getDoubleTapTimeout();
+    }
+
+    @Override // androidx.compose.ui.platform.ViewConfiguration
+    public float getHandwritingGestureLineMargin() {
+        if (Build.VERSION.SDK_INT >= 34) {
+            return AndroidViewConfigurationApi34.INSTANCE.getScaledHandwritingGestureLineMargin(this.viewConfiguration);
+        }
+        return 16.0f;
+    }
+
+    @Override // androidx.compose.ui.platform.ViewConfiguration
+    public float getHandwritingSlop() {
+        if (Build.VERSION.SDK_INT >= 34) {
+            return AndroidViewConfigurationApi34.INSTANCE.getScaledHandwritingSlop(this.viewConfiguration);
+        }
+        return 2.0f;
+    }
+
+    @Override // androidx.compose.ui.platform.ViewConfiguration
+    public long getLongPressTimeoutMillis() {
+        return android.view.ViewConfiguration.getLongPressTimeout();
+    }
+
+    @Override // androidx.compose.ui.platform.ViewConfiguration
+    public float getMaximumFlingVelocity() {
+        return this.viewConfiguration.getScaledMaximumFlingVelocity();
+    }
+
+    @Override // androidx.compose.ui.platform.ViewConfiguration
+    public float getMinimumFlingVelocity() {
+        return this.viewConfiguration.getScaledMinimumFlingVelocity();
+    }
+
+    @Override // androidx.compose.ui.platform.ViewConfiguration
+    /* renamed from: getMinimumTouchTargetSize-MYxV2XQ */
+    public final long mo6923getMinimumTouchTargetSizeMYxV2XQ() {
+        return DpKt.m8071DpSizeYgX7TsA(Dp.m8049constructorimpl(48.0f), Dp.m8049constructorimpl(48.0f));
+    }
+
+    @Override // androidx.compose.ui.platform.ViewConfiguration
+    public float getTouchSlop() {
+        return this.viewConfiguration.getScaledTouchSlop();
+    }
+}

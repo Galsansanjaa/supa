@@ -1,0 +1,28 @@
+package androidx.compose.ui.unit.fontscaling;
+
+import defpackage.lt;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes3.dex */
+public final class MathUtils {
+    public static final int $stable = 0;
+    public static final MathUtils INSTANCE = new MathUtils();
+
+    private MathUtils() {
+    }
+
+    public final float constrainedMap(float f, float f2, float f3, float f4, float f5) {
+        return lerp(f, f2, Math.max(0.0f, Math.min(1.0f, lerpInv(f3, f4, f5))));
+    }
+
+    public final float lerp(float f, float f2, float f3) {
+        return lt.M(f2, f, f3, f);
+    }
+
+    public final float lerpInv(float f, float f2, float f3) {
+        if (f == f2) {
+            return 0.0f;
+        }
+        return (f3 - f) / (f2 - f);
+    }
+}

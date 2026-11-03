@@ -1,0 +1,26 @@
+package defpackage;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes4.dex */
+public final class eg implements cs1 {
+    public static final eg a = new Object();
+    public static final em0 b = em0.a("batteryLevel");
+    public static final em0 c = em0.a("batteryVelocity");
+    public static final em0 d = em0.a("proximityOn");
+    public static final em0 e = em0.a("orientation");
+    public static final em0 f = em0.a("ramUsed");
+    public static final em0 g = em0.a("diskUsed");
+
+    @Override // defpackage.zi0
+    public final void a(Object obj, Object obj2) {
+        x60 x60Var = (x60) obj;
+        ds1 ds1Var = (ds1) obj2;
+        ds1Var.a(b, ((ni) x60Var).a);
+        ni niVar = (ni) x60Var;
+        ds1Var.e(c, niVar.b);
+        ds1Var.d(d, niVar.c);
+        ds1Var.e(e, niVar.d);
+        ds1Var.g(f, niVar.e);
+        ds1Var.g(g, niVar.f);
+    }
+}

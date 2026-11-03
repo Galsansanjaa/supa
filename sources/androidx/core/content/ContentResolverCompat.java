@@ -1,0 +1,30 @@
+package androidx.core.content;
+
+import android.content.ContentResolver;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.CancellationSignal;
+import android.os.OperationCanceledException;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes3.dex */
+public final class ContentResolverCompat {
+    private ContentResolverCompat() {
+    }
+
+    public static Cursor query(ContentResolver contentResolver, Uri uri, String[] strArr, String str, String[] strArr2, String str2, CancellationSignal cancellationSignal) {
+        try {
+            return contentResolver.query(uri, strArr, str, strArr2, str2, cancellationSignal);
+        } catch (Exception e) {
+            if (e instanceof OperationCanceledException) {
+                throw new androidx.core.os.OperationCanceledException();
+            }
+            throw e;
+        }
+    }
+
+    @Deprecated
+    public static Cursor query(ContentResolver contentResolver, Uri uri, String[] strArr, String str, String[] strArr2, String str2, androidx.core.os.CancellationSignal cancellationSignal) {
+        return query(contentResolver, uri, strArr, str, strArr2, str2, cancellationSignal != null ? (CancellationSignal) cancellationSignal.getCancellationSignalObject() : null);
+    }
+}

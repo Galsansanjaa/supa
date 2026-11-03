@@ -1,0 +1,11 @@
+package androidx.compose.ui.node;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes3.dex */
+public final class WeakReference<T> extends java.lang.ref.WeakReference<T> {
+    public static final int $stable = 8;
+
+    public WeakReference(T t) {
+        super(t);
+    }
+}

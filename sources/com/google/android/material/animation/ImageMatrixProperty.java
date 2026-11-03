@@ -1,0 +1,27 @@
+package com.google.android.material.animation;
+
+import android.graphics.Matrix;
+import android.util.Property;
+import android.widget.ImageView;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes4.dex */
+public class ImageMatrixProperty extends Property<ImageView, Matrix> {
+    private final Matrix matrix;
+
+    public ImageMatrixProperty() {
+        super(Matrix.class, "imageMatrixProperty");
+        this.matrix = new Matrix();
+    }
+
+    @Override // android.util.Property
+    public Matrix get(ImageView imageView) {
+        this.matrix.set(imageView.getImageMatrix());
+        return this.matrix;
+    }
+
+    @Override // android.util.Property
+    public void set(ImageView imageView, Matrix matrix) {
+        imageView.setImageMatrix(matrix);
+    }
+}

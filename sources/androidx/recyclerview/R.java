@@ -1,0 +1,66 @@
+package androidx.recyclerview;
+
+/* loaded from: classes.dex */
+public final class R {
+
+    /* loaded from: classes.dex */
+    public static final class attr {
+        public static int fastScrollEnabled = 0x7f040259;
+        public static int fastScrollHorizontalThumbDrawable = 0x7f04025a;
+        public static int fastScrollHorizontalTrackDrawable = 0x7f04025b;
+        public static int fastScrollVerticalThumbDrawable = 0x7f04025c;
+        public static int fastScrollVerticalTrackDrawable = 0x7f04025d;
+        public static int layoutManager = 0x7f04036e;
+        public static int recyclerViewStyle = 0x7f040508;
+        public static int reverseLayout = 0x7f040514;
+        public static int spanCount = 0x7f04057c;
+        public static int stackFromEnd = 0x7f040592;
+
+        private attr() {
+        }
+    }
+
+    /* loaded from: classes.dex */
+    public static final class dimen {
+        public static int fastscroll_default_thickness = 0x7f0700a2;
+        public static int fastscroll_margin = 0x7f0700a3;
+        public static int fastscroll_minimum_range = 0x7f0700a4;
+        public static int item_touch_helper_max_drag_scroll_per_frame = 0x7f0700bb;
+        public static int item_touch_helper_swipe_escape_max_velocity = 0x7f0700bc;
+        public static int item_touch_helper_swipe_escape_velocity = 0x7f0700bd;
+
+        private dimen() {
+        }
+    }
+
+    /* loaded from: classes.dex */
+    public static final class id {
+        public static int item_touch_helper_previous_elevation = 0x7f0b022a;
+
+        private id() {
+        }
+    }
+
+    /* loaded from: classes.dex */
+    public static final class styleable {
+        public static int[] RecyclerView = {android.R.attr.orientation, android.R.attr.clipToPadding, android.R.attr.descendantFocusability, com.uptodown.R.attr.fastScrollEnabled, com.uptodown.R.attr.fastScrollHorizontalThumbDrawable, com.uptodown.R.attr.fastScrollHorizontalTrackDrawable, com.uptodown.R.attr.fastScrollVerticalThumbDrawable, com.uptodown.R.attr.fastScrollVerticalTrackDrawable, com.uptodown.R.attr.layoutManager, com.uptodown.R.attr.reverseLayout, com.uptodown.R.attr.spanCount, com.uptodown.R.attr.stackFromEnd};
+        public static int RecyclerView_android_clipToPadding = 0x00000001;
+        public static int RecyclerView_android_descendantFocusability = 0x00000002;
+        public static int RecyclerView_android_orientation = 0x00000000;
+        public static int RecyclerView_fastScrollEnabled = 0x00000003;
+        public static int RecyclerView_fastScrollHorizontalThumbDrawable = 0x00000004;
+        public static int RecyclerView_fastScrollHorizontalTrackDrawable = 0x00000005;
+        public static int RecyclerView_fastScrollVerticalThumbDrawable = 0x00000006;
+        public static int RecyclerView_fastScrollVerticalTrackDrawable = 0x00000007;
+        public static int RecyclerView_layoutManager = 0x00000008;
+        public static int RecyclerView_reverseLayout = 0x00000009;
+        public static int RecyclerView_spanCount = 0x0000000a;
+        public static int RecyclerView_stackFromEnd = 0x0000000b;
+
+        private styleable() {
+        }
+    }
+
+    private R() {
+    }
+}

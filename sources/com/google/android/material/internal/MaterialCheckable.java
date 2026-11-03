@@ -1,0 +1,19 @@
+package com.google.android.material.internal;
+
+import android.widget.Checkable;
+import com.google.android.material.internal.MaterialCheckable;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes4.dex */
+public interface MaterialCheckable<T extends MaterialCheckable<T>> extends Checkable {
+
+    /* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+    /* loaded from: classes4.dex */
+    public interface OnCheckedChangeListener<C> {
+        void onCheckedChanged(C c, boolean z);
+    }
+
+    int getId();
+
+    void setInternalOnCheckedChangeListener(OnCheckedChangeListener<T> onCheckedChangeListener);
+}

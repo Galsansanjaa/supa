@@ -1,0 +1,77 @@
+package com.google.android.material.shape;
+
+import android.graphics.Canvas;
+import android.graphics.Path;
+import android.graphics.RectF;
+import android.os.Build;
+import android.view.View;
+import com.google.android.material.canvas.CanvasCompat;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes4.dex */
+public abstract class ShapeableDelegate {
+    ShapeAppearanceModel shapeAppearanceModel;
+    boolean forceCompatClippingEnabled = false;
+    boolean offsetZeroCornerEdgeBoundsEnabled = false;
+    RectF maskBounds = new RectF();
+    final Path shapePath = new Path();
+
+    public static ShapeableDelegate create(View view) {
+        return Build.VERSION.SDK_INT >= 33 ? new ShapeableDelegateV33(view) : new ShapeableDelegateV22(view);
+    }
+
+    private boolean isMaskBoundsValid() {
+        RectF rectF = this.maskBounds;
+        return rectF.left <= rectF.right && rectF.top <= rectF.bottom;
+    }
+
+    private void updateShapePath() {
+        if (!isMaskBoundsValid() || this.shapeAppearanceModel == null) {
+            return;
+        }
+        ShapeAppearancePathProvider.getInstance().calculatePath(this.shapeAppearanceModel, 1.0f, this.maskBounds, this.shapePath);
+    }
+
+    public abstract void invalidateClippingMethod(View view);
+
+    public boolean isForceCompatClippingEnabled() {
+        return this.forceCompatClippingEnabled;
+    }
+
+    public void maybeClip(Canvas canvas, CanvasCompat.CanvasOperation canvasOperation) {
+        if (!shouldUseCompatClipping() || this.shapePath.isEmpty()) {
+            canvasOperation.run(canvas);
+            return;
+        }
+        canvas.save();
+        canvas.clipPath(this.shapePath);
+        canvasOperation.run(canvas);
+        canvas.restore();
+    }
+
+    public void onMaskChanged(View view, RectF rectF) {
+        this.maskBounds = rectF;
+        updateShapePath();
+        invalidateClippingMethod(view);
+    }
+
+    public void onShapeAppearanceChanged(View view, ShapeAppearanceModel shapeAppearanceModel) {
+        this.shapeAppearanceModel = shapeAppearanceModel;
+        updateShapePath();
+        invalidateClippingMethod(view);
+    }
+
+    public void setForceCompatClippingEnabled(View view, boolean z) {
+        if (z != this.forceCompatClippingEnabled) {
+            this.forceCompatClippingEnabled = z;
+            invalidateClippingMethod(view);
+        }
+    }
+
+    public void setOffsetZeroCornerEdgeBoundsEnabled(View view, boolean z) {
+        this.offsetZeroCornerEdgeBoundsEnabled = z;
+        invalidateClippingMethod(view);
+    }
+
+    public abstract boolean shouldUseCompatClipping();
+}

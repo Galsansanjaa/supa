@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/core_bg_dialog"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.uptodown.core.view.UptodownTextView
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:id="@+id/tv_dialog_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:coreTypefaceWeight="regular"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp">
+        <com.uptodown.core.view.UptodownTextView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_cancel_option"
+            android:focusable="true"
+            android:clickable="true"
+            android:text="@string/option_button_disable"
+            app:coreTypefaceWeight="medium"
+            style="@style/DialogButtonsStyle"/>
+        <com.uptodown.core.view.UptodownTextView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_accept_option"
+            android:focusable="true"
+            android:clickable="true"
+            android:text="@string/ok"
+            android:layout_marginStart="10dp"
+            app:coreTypefaceWeight="medium"
+            style="@style/DialogButtonsStyle"/>
+    </LinearLayout>
+</LinearLayout>

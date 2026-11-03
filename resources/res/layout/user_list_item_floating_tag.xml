@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uptodown.core.view.UptodownTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/light_grey"
+    style="@style/TextViewWishlistItemFloatingCategory"/>

@@ -1,0 +1,25 @@
+package j$.util.stream;
+
+import j$.util.Spliterator;
+import java.util.function.Consumer;
+import java.util.function.IntFunction;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes2.dex */
+public interface h2 {
+    h2 a(int i);
+
+    long count();
+
+    void forEach(Consumer consumer);
+
+    h2 j(long j, long j2, IntFunction intFunction);
+
+    void k(Object[] objArr, int i);
+
+    Object[] m(IntFunction intFunction);
+
+    int o();
+
+    Spliterator spliterator();
+}

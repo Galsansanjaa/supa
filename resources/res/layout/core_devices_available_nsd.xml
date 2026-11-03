@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.uptodown.core.view.UptodownTextView
+        android:textSize="14sp"
+        android:textColor="@color/grey_80"
+        android:id="@+id/tv_explanation_devices_available"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/msg_devices_available_nsd"
+        app:coreTypefaceWeight="regular"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_devices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_above="@+id/tv_cancel"
+        android:layout_below="@+id/tv_explanation_devices_available"/>
+    <com.uptodown.core.view.UptodownTextView
+        android:textSize="@dimen/text_size_m"
+        android:textColor="@color/white"
+        android:id="@+id/tv_cancel"
+        android:background="@drawable/core_ripple_button_accent_color"
+        android:padding="@dimen/margin_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_button_cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:coreTypefaceWeight="medium"/>
+</RelativeLayout>

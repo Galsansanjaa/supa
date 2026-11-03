@@ -1,0 +1,26 @@
+package androidx.datastore.core;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+
+/* compiled from: r8-map-id-873963f5d530defb17a8ef05986c59977090e8d51dfa8a657ed00bfc55036756 */
+/* loaded from: classes4.dex */
+final class Api26Impl {
+    public static final Api26Impl INSTANCE = new Api26Impl();
+
+    private Api26Impl() {
+    }
+
+    public final boolean move(File file, File file2) {
+        file.getClass();
+        file2.getClass();
+        try {
+            Files.move(file.toPath(), file2.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            return true;
+        } catch (IOException unused) {
+            return false;
+        }
+    }
+}

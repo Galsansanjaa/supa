@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.uptodown.core.view.UptodownTextView
+        android:textSize="@dimen/text_size_m"
+        android:textColor="@color/text_primary"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_checking_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_checking_device_compatibility"/>
+    <ProgressBar
+        android:background="@drawable/shape_bg_checking_compatibility_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="@dimen/margin_s"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/bg_checking_compatibility_indeterminate"
+        android:clipToOutline="true"
+        style="@android:style/Widget.ProgressBar.Horizontal"/>
+</LinearLayout>
