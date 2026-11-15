@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.uptodown.core.view.UptodownTextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:textSize="@dimen/font_size_26"
-    android:textColor="@color/text_primary"
-    android:ellipsize="end"
-    android:id="@+id/tv_top_by_category_title"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:coreTypefaceWeight="medium"/>
